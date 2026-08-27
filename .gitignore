@@ -1,0 +1,12 @@
+# Local application data and generated outputs must never be committed.
+node_modules/
+dist/
+build/
+.env
+.env.*
+*.log
+*.pcap
+*.hidlog
+*.eeprom
+*.rawhid
+*.device-backup
