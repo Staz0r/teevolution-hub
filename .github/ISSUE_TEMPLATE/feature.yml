@@ -1,0 +1,54 @@
+name: Feature or enhancement
+description: Suggest a user-facing improvement for Teevolution Hub.
+title: "[Feature] "
+labels: ["enhancement", "community-request"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Performance
+        - Profiles
+        - Buttons
+        - Lighting
+        - Battery
+        - UI
+        - Accessibility
+        - Driver
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What is difficult or missing today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe what users should be able to do.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example or reference
+      description: Optional. Include screenshots, comparable software, or a workflow example.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and the roadmap first.
+          required: true
+        - label: I understand that hardware-dependent requests may first become research issues.
+          required: true
