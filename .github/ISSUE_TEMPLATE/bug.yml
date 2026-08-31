@@ -1,0 +1,71 @@
+name: Bug report
+description: Report a problem in Teevolution Hub or a supported device workflow.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Driver
+        - Performance
+        - Profiles
+        - Buttons
+        - Lighting
+        - Battery
+        - UI
+        - Accessibility
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Hub
+        2. Select or change...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include Hub version, operating system, device model, and wired/wireless connection.
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or additional context
+      description: Do not attach raw device logs, protocol captures, firmware dumps, or private diagnostic files.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues first.
+          required: true
+        - label: I removed private device data from attachments.
+          required: true

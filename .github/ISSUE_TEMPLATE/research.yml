@@ -1,0 +1,57 @@
+name: Hardware or feature research
+description: Investigate a capability before promising or implementing it.
+title: "[Research] "
+labels: ["research", "testing"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Research area
+      options:
+        - Driver
+        - Performance
+        - Buttons
+        - Lighting
+        - Battery
+        - Profiles
+        - UI
+        - Accessibility
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Research goal
+      description: What needs to be confirmed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: Questions to answer
+      placeholder: |
+        - Is this capability supported?
+        - Can it be read safely?
+        - Can it be changed and verified?
+        - Does it behave differently when wired or wireless?
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: What evidence is needed before a separate implementation issue is created?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This issue contains no raw device logs, protocol captures, firmware dumps, or private diagnostics.
+          required: true
